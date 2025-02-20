@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just Spoiled - Luxury Convenience</title>
     <meta name="description" content="Experience luxury convenience with Just Spoiled. Quality service available 24/7, 365 days a year.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body class="font-sans antialiased">
     <!-- Announcement Bar -->
@@ -17,21 +30,39 @@
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="text-2xl font-bold">Just Spoiled</div>
+            <a href="https://JonPBoy.github.io/just-spoiled-2025-02-20-cn3pu" class="text-2xl font-bold hover:text-gray-700 transition-colors duration-300">Just Spoiled</a>
+            
+            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8">
-                <a href="#" class="hover:text-gray-600 transition-colors duration-300">Home</a>
-                <a href="#" class="hover:text-gray-600 transition-colors duration-300">Shop</a>
-                <a href="#" class="hover:text-gray-600 transition-colors duration-300">About</a>
-                <a href="#" class="hover:text-gray-600 transition-colors duration-300">Contact</a>
+                <a href="#home" class="hover:text-gray-600 transition-colors duration-300">Home</a>
+                <a href="#features" class="hover:text-gray-600 transition-colors duration-300">Features</a>
+                <a href="#benefits" class="hover:text-gray-600 transition-colors duration-300">Benefits</a>
+                <a href="#about" class="hover:text-gray-600 transition-colors duration-300">About</a>
+                <a href="#testimonials" class="hover:text-gray-600 transition-colors duration-300">Testimonials</a>
+                <a href="#contact" class="hover:text-gray-600 transition-colors duration-300">Contact</a>
             </div>
-            <button class="md:hidden">
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden" aria-label="Toggle menu">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
+
+            <!-- Mobile Menu Dropdown -->
+            <div class="mobile-menu hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
+                <div class="flex flex-col space-y-4 p-4">
+                    <a href="#home" class="hover:text-gray-600 transition-colors duration-300">Home</a>
+                    <a href="#features" class="hover:text-gray-600 transition-colors duration-300">Features</a>
+                    <a href="#benefits" class="hover:text-gray-600 transition-colors duration-300">Benefits</a>
+                    <a href="#about" class="hover:text-gray-600 transition-colors duration-300">About</a>
+                    <a href="#testimonials" class="hover:text-gray-600 transition-colors duration-300">Testimonials</a>
+                    <a href="#contact" class="hover:text-gray-600 transition-colors duration-300">Contact</a>
+                </div>
+            </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen">
+    <section id="home" class="relative h-screen">
         <div class="absolute inset-0">
             <img src="https://images.unsplash.com/photo-1504093376055-b3094b674dcb?w=1600&h=900&fit=crop&q=80" 
                  alt="Luxury convenience" 
@@ -40,10 +71,12 @@
         </div>
         <div class="relative container mx-auto px-4 h-full flex items-center justify-center">
             <div class="text-center text-white max-w-4xl">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">Just Spoiled</h1>
-                <p class="text-xl md:text-2xl mb-8">Convenience is Luxury</p>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Just Spoiled</h1>
+                <p class="text-xl md:text-2xl mb-8">Experience Luxury at Your Fingertips</p>
                 <a href="https://JonPaul.Hair" 
-                   class="inline-block bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition duration-300">
+                   class="inline-block bg-white text-black px-8 py-4 rounded-full text-lg font-semibold 
+                          hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 
+                          hover:shadow-lg">
                     Shop Now
                 </a>
             </div>
@@ -51,84 +84,166 @@
     </section>
 
     <!-- Features -->
-    <section class="py-24 bg-gray-50">
+    <section id="features" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 
+                            transform hover:scale-105 hover:bg-gray-50">
                     <div class="text-4xl mb-4"><i class="fas fa-bolt text-blue-600"></i></div>
-                    <h3 class="text-xl font-bold mb-4">Fast</h3>
-                    <p class="text-gray-600">Lightning-quick service at your fingertips</p>
+                    <h3 class="text-xl font-bold mb-4">Lightning Fast Service</h3>
+                    <p class="text-gray-600">Experience rapid response times with our streamlined delivery system</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 
+                            transform hover:scale-105 hover:bg-gray-50">
                     <div class="text-4xl mb-4"><i class="fas fa-shield-alt text-blue-600"></i></div>
-                    <h3 class="text-xl font-bold mb-4">Dependable</h3>
-                    <p class="text-gray-600">Service you can count on, every time</p>
+                    <h3 class="text-xl font-bold mb-4">100% Reliable</h3>
+                    <p class="text-gray-600">Count on our proven track record of consistent, dependable service</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 
+                            transform hover:scale-105 hover:bg-gray-50">
                     <div class="text-4xl mb-4"><i class="fas fa-magic text-blue-600"></i></div>
-                    <h3 class="text-xl font-bold mb-4">Convenient</h3>
-                    <p class="text-gray-600">Effortless luxury at your service</p>
+                    <h3 class="text-xl font-bold mb-4">Premium Convenience</h3>
+                    <p class="text-gray-600">Enjoy seamless luxury service tailored to your lifestyle</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Benefits -->
-    <!-- Quality Section -->
-    <section class="py-16 bg-white">
+    <section id="benefits">
+        <!-- Quality Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl font-bold mb-6">Unmatched Quality</h2>
+                        <p class="text-gray-600 mb-8">Experience the pinnacle of luxury service with our meticulously 
+                        curated offerings. Every interaction is designed to exceed expectations, delivering a level of 
+                        excellence that sets new standards in convenience and sophistication.</p>
+                        <a href="https://JonPaul.Hair" 
+                           class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 
+                                  transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                            Discover More
+                        </a>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" 
+                             alt="Premium quality service" 
+                             class="rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 24/7 Delivery Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
+                             alt="24/7 Delivery service" 
+                             class="rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">Round-the-Clock Service</h2>
+                        <p class="text-gray-600 mb-8">Our dedicated team operates 24/7 to ensure your needs are met at any 
+                        hour. Whether it's dawn or midnight, our professional staff is ready to deliver exceptional service 
+                        with the same commitment to excellence.</p>
+                        <a href="https://JonPaul.Hair" 
+                           class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 
+                                  transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                            Experience Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 365 Days Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl font-bold mb-6">Always Available</h2>
+                        <p class="text-gray-600 mb-8">We're committed to serving you every single day of the year. 
+                        Holidays, weekends, or special occasions - our unwavering dedication ensures you never have to 
+                        compromise on quality or convenience.</p>
+                        <a href="https://JonPaul.Hair" 
+                           class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 
+                                  transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                            Start Today
+                        </a>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" 
+                             alt="365 days luxury service" 
+                             class="rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1">
-                    <h2 class="text-3xl font-bold mb-6">Quality</h2>
-                    <p class="text-gray-600 mb-8">Experience unmatched quality in every service we provide.</p>
-                    <a href="https://JonPaul.Hair" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition duration-300">
-                        Learn More
-                    </a>
-                </div>
-                <div class="order-1 md:order-2">
-                    <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" 
-                         alt="Quality service" 
-                         class="rounded-xl shadow-lg">
-                </div>
+            <h2 class="text-3xl font-bold text-center mb-12">About Just Spoiled</h2>
+            <div class="max-w-3xl mx-auto text-gray-600 space-y-8">
+                <p>Founded in 2020, Just Spoiled emerged from a vision to revolutionize the luxury convenience industry. 
+                Our journey began when we identified a gap in the market for truly personalized, high-end service 
+                delivery that caters to the discerning needs of our clients.</p>
+                
+                <p>Our mission is to redefine convenience through unparalleled service excellence and unwavering 
+                commitment to quality. We believe in creating extraordinary experiences that transform everyday moments 
+                into memorable occasions, guided by our core values of integrity, innovation, and customer-centricity.</p>
             </div>
         </div>
     </section>
 
-    <!-- 24/7 Delivery Section -->
-    <section class="py-16 bg-gray-50">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-white">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
-                         alt="24/7 Delivery" 
-                         class="rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"The 24/7 availability has been a game-changer for my busy schedule. 
+                    Their response time is incredible!"</p>
+                    <div class="text-sm">
+                        <p class="font-bold">Sarah Johnson</p>
+                        <p class="text-gray-500">CEO, Tech Innovations</p>
+                    </div>
                 </div>
-                <div>
-                    <h2 class="text-3xl font-bold mb-6">24/7 Delivery</h2>
-                    <p class="text-gray-600 mb-8">Round-the-clock service to meet your needs anytime.</p>
-                    <a href="https://JonPaul.Hair" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition duration-300">
-                        Start Now
-                    </a>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"Exceptional service quality and attention to detail. They've saved me 
+                    countless hours and never disappoint."</p>
+                    <div class="text-sm">
+                        <p class="font-bold">Michael Chang</p>
+                        <p class="text-gray-500">Executive Director, Global Finance</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 365 Days Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1">
-                    <h2 class="text-3xl font-bold mb-6">365 Days a Year</h2>
-                    <p class="text-gray-600 mb-8">Never miss a day with our year-round service commitment.</p>
-                    <a href="https://JonPaul.Hair" class="inline-block bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition duration-300">
-                        Get Started
-                    </a>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"Their commitment to excellence is unmatched. Every interaction feels 
+                    personal and carefully considered."</p>
+                    <div class="text-sm">
+                        <p class="font-bold">Emma Roberts</p>
+                        <p class="text-gray-500">Luxury Brand Manager</p>
+                    </div>
                 </div>
-                <div class="order-1 md:order-2">
-                    <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" 
-                         alt="365 days service" 
-                         class="rounded-xl shadow-lg">
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"Just Spoiled has redefined what I expect from a luxury service. Their 
+                    reliability is outstanding."</p>
+                    <div class="text-sm">
+                        <p class="font-bold">David Miller</p>
+                        <p class="text-gray-500">Real Estate Developer</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -139,20 +254,39 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
             <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+                    <button class="w-full px-6 py-4 text-left hover:bg-gray-50 transition duration-300">
+                        <h3 class="text-lg font-semibold">What areas do you service?</h3>
+                    </button>
+                    <div class="px-6 pb-4">
+                        <p class="text-gray-600">We provide worldwide service with dedicated local teams in major cities.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
                     <button class="w-full px-6 py-4 text-left hover:bg-gray-50 transition duration-300">
                         <h3 class="text-lg font-semibold">How fast is your delivery?</h3>
                     </button>
                     <div class="px-6 pb-4">
-                        <p class="text-gray-600">We offer 5-day worldwide shipping on all orders.</p>
+                        <p class="text-gray-600">We guarantee 5-day worldwide shipping on all orders with real-time tracking.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
                     <button class="w-full px-6 py-4 text-left hover:bg-gray-50 transition duration-300">
                         <h3 class="text-lg font-semibold">What is your return policy?</h3>
                     </button>
                     <div class="px-6 pb-4">
-                        <p class="text-gray-600">We offer a 100% satisfaction guarantee with full refund upon return.</p>
+                        <p class="text-gray-600">We offer a 30-day satisfaction guarantee with hassle-free returns.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+                    <button class="w-full px-6 py-4 text-left hover:bg-gray-50 transition duration-300">
+                        <h3 class="text-lg font-semibold">How do I contact customer service?</h3>
+                    </button>
+                    <div class="px-6 pb-4">
+                        <p class="text-gray-600">Our support team is available 24/7 via email, phone, or live chat.</p>
                     </div>
                 </div>
             </div>
@@ -160,43 +294,70 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-24 bg-black text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-8">Ready to Experience Luxury?</h2>
-            <p class="text-xl mb-12">Join us today and discover true convenience</p>
+    <section class="relative py-24 bg-black text-white overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=1600&h=900&fit=crop&q=80" 
+                 alt="Luxury background" 
+                 class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="relative container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">Ready to Experience True Luxury?</h2>
+            <p class="text-xl mb-12">Join our exclusive community and elevate your lifestyle</p>
             <a href="https://JonPaul.Hair" 
-               class="inline-block bg-white text-black px-12 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition duration-300">
-                Get Started Now
+               class="inline-block bg-white text-black px-12 py-4 rounded-full text-lg font-semibold 
+                      hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                Begin Your Journey
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16">
+    <footer id="contact" class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Just Spoiled</h3>
-                    <p class="text-gray-400">Convenience is Luxury</p>
+                    <p class="text-gray-400">Elevating convenience to an art form</p>
+                    <div class="mt-4 space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
                 </div>
+                
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <p class="text-gray-400">jonpboy@gmail.com</p>
+                    <p class="text-gray-400">Email: jonpboy@gmail.com</p>
+                    <p class="text-gray-400">Phone: (555) 123-4567</p>
+                    <p class="text-gray-400">Address: Luxury Avenue, Suite 100</p>
                 </div>
+                
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Links</h4>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition duration-300">About</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">Blog</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="#home" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#features" class="hover:text-white transition duration-300">Features</a></li>
+                        <li><a href="#about" class="hover:text-white transition duration-300">About</a></li>
+                        <li><a href="https://JonPBoy.github.io/just-spoiled-2025-02-20-cn3pu/blog.html" 
+                               class="hover:text-white transition duration-300">Blog</a></li>
                     </ul>
                 </div>
+                
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Policies</h4>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition duration-300">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">Terms of Service</a></li>
+                        <li><a href="https://JonPBoy.github.io/just-spoiled-2025-02-20-cn3pu/privacy.html" 
+                               class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="https://JonPBoy.github.io/just-spoiled-2025-02-20-cn3pu/terms.html" 
+                               class="hover:text-white transition duration-300">Terms of Service</a></li>
                         <li><a href="#" class="hover:text-white transition duration-300">Shipping Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Refund Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -205,5 +366,37 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
